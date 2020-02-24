@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .sliderbar {
+            position: absolute;
+            left: 50%;
+            top: 300px;
+            margin-left: 600px;
+            width: 45px;
+            height: 130px;
+            background-color: pink;
+        }
+        
+        .w {
+            width: 1200px;
+            margin: 10px auto;
+        }
+        
+        .header {
+            height: 150px;
+            background-color: blue;
+        }
+        
+        .banner {
+            height: 250px;
+            background-color: green;
+        }
+        
+        .main {
+            height: 1000px;
+            background-color: yellow;
+        }
+        
+        span {
+            display: none;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sliderbar">
+        <span class="bar">返回顶部</span>
+    </div>
+    <div class="header w">head</div>
+    <div class="banner w">banner</div>
+    <div class="main w">main</div>
+    <script>
+        var sliderbar = document.querySelector('.sliderbar');
+        var banner = document.querySelector('.banner');
+        var main = document.querySelector('.main');
+        var bar = document.querySelector('.bar');
+        var bannerTop = banner.offsetTop
+        var sliderbarTop = sliderbar.offsetTop - bannerTop;
+        var mainTop = main.offsetTop
+        document.addEventListener('scroll', function() {
+            if (window.pageYOffset >= bannerTop) {
+                sliderbar.style.position = 'fixed';
+                sliderbar.style.top = sliderbarTop + 'px';
+            } else {
+                sliderbar.style.position = 'absolute';
+                sliderbar.style.top = '300px';
+            }
+            if (window.pageYOffset >= mainTop) {
+                bar.style.display = 'block';
+            } else {
+                bar.style.display = 'none';
+            }
+        })
+    </script>
+</body>
+
+</html

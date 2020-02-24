@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+        body {
+            background: url(img/wx.jpg) repeat-x;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .wx {
+            height: 400px;
+        }
+        
+        .wx ul li {
+            float: left;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        
+        .wx a {
+            display: inline-block;
+            height: 33px;
+            padding-left: 15px;
+            background: url(img/to.png) no-repeat;
+            text-align: center;
+            line-height: 33px;
+            font-size: 14px;
+            color: #fff;
+        }
+        
+        .wx a span {
+            display: inline-block;
+            height: 33px;
+            padding-right: 15px;
+            background: url(img/to.png) no-repeat right;
+        }
+        
+        .wx li a:hover,
+        .wx li a:hover span {
+            background-image: url(images/ao.png);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wx">
+        <ul>
+            <li>
+                <a href="#">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>帮助与反馈</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>公众平台</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span>开放平台</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

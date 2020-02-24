@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        body {
+            background-color: #000;
+        }
+        
+        .wrap {
+            width: 630px;
+            height: 394px;
+            margin: 100px auto 0;
+            background-color: #000;
+            border: 1px solid #fff;
+            padding: 10px 0 0 10px;
+        }
+        
+        .wrap ul li {
+            float: left;
+            margin: 0 10px 10px 0;
+        }
+        
+        .wrap img {
+            display: block;
+            border: 0;
+        }
+    </style>
+    <script src="./jquery.min.js"></script>
+    <script>
+        $(function() {
+            $(".wrap li").hover(function() {
+                $(this).siblings().stop().fadeTo(400, 0.5);
+            }, function() {
+                $(this).siblings().stop().fadeTo(400, 1);
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <ul>
+            <li>
+                <a href="#"><img src="img/01.jpg" alt="" /></a>
+            </li>
+            <li>
+                <a href="#"><img src="img/02.jpg" alt="" /></a>
+            </li>
+            <li>
+                <a href="#"><img src="img/03.jpg" alt="" /></a>
+            </li>
+            <li>
+                <a href="#"><img src="img/04.jpg" alt="" /></a>
+            </li>
+            <li>
+                <a href="#"><img src="img/05.jpg" alt="" /></a>
+            </li>
+            <li>
+                <a href="#"><img src="img/06.jpg" alt="" /></a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
